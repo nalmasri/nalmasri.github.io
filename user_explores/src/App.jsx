@@ -896,7 +896,7 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
 
       </div>
 
-      {/* Footer */}
+     {/* Footer */}
       <div style={{
         background: '#414141',
         color: 'rgba(255,255,255,0.92)',
@@ -931,15 +931,16 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: isMobile ? 12 : 18, alignItems: 'center', justifyContent: isMobile ? 'flex-start' : 'center', paddingTop: isMobile ? 0 : 18 }}>
               {[
-                { label: 'Home', href: 'http://localhost:3000/#' },
-                { label: 'About Us', href: 'http://localhost:3000/#' },
-                { label: 'FAQs', href: 'http://localhost:3000/#' },
-                { label: 'Contact Us', href: 'http://localhost:3000/#' },
+                { label: 'الصفحة الرئيسية', href: 'https://www.cavt.jo/ar/' },
+                { label: 'لمحة عن كلية التدريب المهني المتقدم', href: 'https://www.cavt.jo/ar/%d9%84%d9%85%d8%ad%d8%a9-%d8%b9%d9%86-%d9%83%d9%84%d9%8a%d8%a9-%d8%a7%d9%84%d8%aa%d8%af%d8%b1%d9%8a%d8%a8-%d8%a7%d9%84%d9%85%d9%87%d9%86%d9%8a-%d8%a7%d9%84%d9%85%d8%aa%d9%82%d8%af%d9%85/' },
+                // { label: 'FAQs', href: 'http://localhost:3000/#' },
+                { label: 'اتصل بنا', href: 'https://www.cavt.jo/ar/%d8%a7%d8%aa%d8%b5%d9%84-%d8%a8%d9%86%d8%a7/' },
               ].map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  onClick={(event) => event.preventDefault()}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     color: 'rgba(255,255,255,0.92)',
                     textDecoration: 'none',
@@ -955,14 +956,24 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
 
             <div style={{ display: 'flex', justifyContent: isMobile ? 'flex-start' : 'flex-end', alignItems: 'flex-start', gap: 10, paddingTop: isMobile ? 0 : 6, flexWrap: 'wrap' }}>
               {[
-                { label: 'f', name: 'Facebook' },
-                { label: 'x', name: 'X' },
-                { label: '◎', name: 'Instagram' },
-                { label: 'in', name: 'LinkedIn' },
+                { label: 'f', name: 'Facebook', href: 'https://www.facebook.com/cavt.jo' },
+                { label: 'x', name: 'X', href: 'https://twitter.com/cavt_jo' },
+                {
+                  label: (
+                    <svg aria-hidden="true" className="svg-inline--fa fa-instagram" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="" style={{width: '18px', height: '18px'}}>
+                      <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                    </svg>
+                  ),
+                  name: 'Instagram',
+                  href: 'https://www.instagram.com/cavt.jo'
+                },
+                { label: 'in', name: 'LinkedIn', href: 'https://www.linkedin.com/company/cavt-jo' },
               ].map((social) => (
-                <button
+                <a
                   key={social.name}
-                  type="button"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.name}
                   style={{
                     width: 40,
@@ -975,14 +986,15 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontWeight: 700,
-                    fontSize: social.label === 'in' ? 16 : 18,
+                    fontSize: social.name === 'LinkedIn' ? 16 : 18,
                     cursor: 'pointer',
                     boxShadow: '0 2px 6px rgba(0,0,0,0.14)',
                     textTransform: 'lowercase',
+                    textDecoration: 'none',
                   }}
                 >
                   {social.label}
-                </button>
+                </a>
               ))}
             </div>
           </div>
