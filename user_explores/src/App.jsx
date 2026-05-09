@@ -692,7 +692,7 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
           src={logo}
           alt="CAVT Logo"
           style={{
-            height: isMobile ? 28 : 42,
+            // height: isMobile ? 28 : 42,
             width: 'auto',
             height: 42,
             objectFit: 'contain',
