@@ -76,6 +76,7 @@ body {
 
 .navbar {
   background: var(--cavt-red);
+  direction:rtl;
   padding: 14px 20px;
   position: sticky;
   top: 0;
