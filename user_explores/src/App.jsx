@@ -1744,11 +1744,11 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
 
         {/* Page Title */}
         <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: isMobile ? '0 16px 10px' : '0 24px 14px', direction: 'rtl' }}>
-          <div style={{ marginBottom: isMobile ? 6 : 8 }}>
-            <span style={{ background: 'linear-gradient(135deg, #e59a72, #9C0D13)', color: 'white', fontSize: 12, padding: '4px 16px', borderRadius: 20, fontWeight: 600, fontFamily: 'Tajawal,sans-serif', boxShadow: '0 8px 20px rgba(156,13,19,0.18)' }}>
+          {/* <div style={{ marginBottom: isMobile ? 6 : 8 }}> */}
+            {/* <span style={{ background: 'linear-gradient(135deg, #e59a72, #9C0D13)', color: 'white', fontSize: 12, padding: '4px 16px', borderRadius: 20, fontWeight: 600, fontFamily: 'Tajawal,sans-serif', boxShadow: '0 8px 20px rgba(156,13,19,0.18)' }}>
               المسار الثاني — اعرف اهتماماتك
-            </span>
-          </div>
+            </span> */}
+          {/* </div> */}
           <h1 style={{ fontSize: isMobile ? 26 : 36, fontWeight: 900, color: '#24201d', marginBottom: isMobile ? 4 : 6, lineHeight: 1.2, letterSpacing: '-0.02em', fontFamily: 'Tajawal,sans-serif' }}>
             شو <span style={{ color: '#9C0D13' }}>اهتماماتك</span>؟
           </h1>
