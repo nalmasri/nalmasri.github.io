@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import './index.css';
 import UserExploresApp from '../../user_explores/src/App.jsx';
+import UserKnowsHisPathApp from '../../user_knows_his_path/src/App.jsx';
 import logo from '../../Assets/image2.png';
 import footerLogo from '../../Assets/footer_logo.png';
 import heroVideo from '../../Assets/CAVT_Video.mp4';
@@ -8,6 +9,7 @@ import heroVideo from '../../Assets/CAVT_Video.mp4';
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showExploreApp, setShowExploreApp] = useState(false);
+  const [showPathApp, setShowPathApp] = useState(false);
   const [isMobile, setIsMobile] = useState(() => {
     return typeof window !== 'undefined' && window.innerWidth <= 900;
   });
@@ -29,8 +31,13 @@ export default function App() {
       const state = event.state;
       if (state?.cavtApp === 'explore') {
         setShowExploreApp(true);
+        setShowPathApp(false);
+      } else if (state?.cavtApp === 'path') {
+        setShowPathApp(true);
+        setShowExploreApp(false);
       } else if (state?.cavtApp === 'landing') {
         setShowExploreApp(false);
+        setShowPathApp(false);
       }
     };
 
@@ -46,15 +53,19 @@ export default function App() {
   };
 
   const handleBackToLanding = () => {
-    if (typeof window !== 'undefined' && window.history.state?.cavtApp === 'explore') {
+    if (typeof window !== 'undefined' && (window.history.state?.cavtApp === 'explore' || window.history.state?.cavtApp === 'path')) {
       window.history.back();
       return;
     }
     setShowExploreApp(false);
+    setShowPathApp(false);
   };
 
  const handleApply = () => {
-    window.location.href = '../../user_knows_his_path/src/index.html';
+    if (typeof window !== 'undefined' && !showPathApp) {
+      window.history.pushState({ cavtApp: 'path' }, '', '#path');
+    }
+    setShowPathApp(true);
   };
 
   const handleScrollTop = useCallback(() => {
@@ -65,15 +76,18 @@ export default function App() {
     return <UserExploresApp onBack={handleBackToLanding} />;
   }
 
+  if (showPathApp) {
+    return <UserKnowsHisPathApp onBack={handleBackToLanding} />;
+  }
+
   return (
     <div className="app">
       <nav className="navbar">
         <div className="nav-container">
-          <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
-            {/* <a href="#">الرئيسية</a>
-            <a href="#programs">البرامج</a>
-            <a href="#about">عن الكلية</a>
-            <a href="#contact">اتصل بنا</a> */}
+          <div className="logo-mark">
+            <a href="/">
+              <img src={logo} alt="CAVT Logo" />
+            </a>
           </div>
 
           <button
@@ -84,10 +98,11 @@ export default function App() {
             ☰
           </button>
 
-          <div className="logo-mark">
-            <a href="/">
-              <img src={logo} alt="CAVT Logo" />
-            </a>
+          <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
+            {/* <a href="#">الرئيسية</a>
+            <a href="#programs">البرامج</a>
+            <a href="#about">عن الكلية</a>
+            <a href="#contact">اتصل بنا</a> */}
           </div>
         </div>
       </nav>
