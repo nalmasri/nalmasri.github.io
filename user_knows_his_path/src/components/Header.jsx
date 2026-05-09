@@ -1,0 +1,15 @@
+import React from 'react';
+
+export default function Header() {
+  return (
+    <div className="header">
+      <div className="header-brand" aria-label="CAVT logo">
+        <div className="header-brand-mark">CAVT</div>
+        <div className="header-brand-sub">College of Advanced Vocational Training</div>
+      </div>
+      <button className="back-btn" onClick={() => window.history.back()}>
+        رجوع
+      </button>
+    </div>
+  );
+}
