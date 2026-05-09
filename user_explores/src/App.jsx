@@ -694,6 +694,7 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
           style={{
             height: isMobile ? 28 : 42,
             width: 'auto',
+            height: 42,
             objectFit: 'contain',
             display: 'block',
             justifySelf: 'end',
