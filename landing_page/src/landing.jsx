@@ -67,30 +67,11 @@ export default function App() {
 
   return (
     <div className="app">
-      <nav className="navbar">
-        <div className="nav-container">
-          <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
-            {/* <a href="#">الرئيسية</a>
-            <a href="#programs">البرامج</a>
-            <a href="#about">عن الكلية</a>
-            <a href="#contact">اتصل بنا</a> */}
-          </div>
-
-          <button
-            className="menu-toggle"
-            type="button"
-            onClick={() => setMenuOpen((prev) => !prev)}
-          >
-            ☰
-          </button>
-
-          <div className="logo-mark">
-            <a href="/">
-              <img src={logo} alt="CAVT Logo" />
-            </a>
-          </div>
+      <header className="header">
+        <div className="header-brand" aria-label="CAVT logo">
+          <img src={logo} alt="CAVT Logo" className="header-logo" />
         </div>
-      </nav>
+      </header>
 
       <section className="hero-video-section">
         <video className="bg-video" autoPlay muted loop playsInline>

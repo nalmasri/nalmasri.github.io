@@ -652,57 +652,53 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
       `}</style>
 
       {/* Header */}
-      <div style={{
-        
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        height: headerHeight, background: '#9C0D13',
-        display: 'grid', alignItems: 'center',
-        gridTemplateColumns: isMobile ? '88px 1fr 80px' : '150px 1fr 110px',
-        gap: isMobile ? 6 : 12,
-        padding: isMobile ? '0 10px' : '0 18px',
+      <header style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 100,
+        height: headerHeight,
+        background: '#9C0D13',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '0 24px',
         boxShadow: '0 3px 20px rgba(156,13,19,0.4)',
-        direction: 'ltr',
-      }}
-      
-      >
+      }}>
         <button
           onClick={onBack}
           style={{
-            background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.35)',
-            color: 'white', padding: isMobile ? '5px 12px' : '6px 18px', borderRadius: 6,
-            fontFamily: 'Cairo,sans-serif', fontSize: isMobile ? 12 : 13, cursor: 'pointer',
-            justifySelf: 'start',
+            position: 'absolute',
+            left: 18,
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(255,255,255,0.14)',
+            border: '1px solid rgba(255,255,255,0.35)',
+            color: '#fff',
+            padding: '5px 14px',
+            borderRadius: '8px',
+            fontFamily: 'Tajawal, sans-serif',
+            fontSize: '12px',
+            cursor: 'pointer',
           }}
         >
           رجوع
         </button>
-        <span style={{
-          direction: 'rtl',
-          fontSize: isMobile ? 9 : 11, letterSpacing: isMobile ? 0.8 : 1.5, color: 'rgba(255,255,255,0.75)', fontFamily: 'Tajawal,sans-serif',
-          whiteSpace: 'nowrap',
-          maxWidth: isMobile ? '100%' : 'none',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
-          textAlign: 'center',
-          justifySelf: 'center',
-        }}>
-          اكتشف اهتماماتك — المسار الثاني
-        </span>
-        <img
-          src={logo}
-          alt="CAVT Logo"
-          style={{
-            height: isMobile ? 28 : 42,
-            width: 'auto',
-            height: 42,
-            objectFit: 'contain',
-            display: 'block',
-            justifySelf: 'end',
-            maxWidth: isMobile ? 84 : 140,
-          }}
-        />
-      </div>
-
+       <div style={{
+  position: 'absolute',
+  right: 18,
+  top: '50%',
+  transform: 'translateY(-50%)',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+  lineHeight: 1,
+  color: '#fff',
+}}>
+  <img src={logo} alt="CAVT Logo" className="header-logo" />
+</div>
+</header>
       {/* Stage */}
       <div style={{ position: 'relative', marginTop: headerHeight, minHeight: `calc(100vh - ${headerHeight}px)`, flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', background: '#fff', overflow: 'hidden', paddingTop: isMobile ? 16 : 24 }}>
         <BackgroundCanvas />
