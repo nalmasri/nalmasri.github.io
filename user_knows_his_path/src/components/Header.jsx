@@ -45,7 +45,7 @@ export default function Header() {
   style={{
     margin: 0,
     fontWeight: '200', // remove bold
-    fontSize: isMobile ? 60 : 20,
+    fontSize: isMobile ? 10 : 20,
     letterSpacing: isMobile ? 1 : 2,
     color: 'rgba(255,255,255,0.95)',
     fontFamily: 'Tajawal, sans-serif',
