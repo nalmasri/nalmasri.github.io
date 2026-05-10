@@ -148,7 +148,7 @@ position: absolute;
 h1 {
   margin: 0 0 8px;
   text-align: center;
-  font-size: 87px;
+  font-size: 48px;
   font-weight: 900;
   line-height: 1.15;
   letter-spacing: -0.03em;
@@ -687,7 +687,7 @@ h1 span {
   }
 
   h1 {
-    font-size: 63px;
+    font-size: 34px;
   }
 
   .main-grid {
