@@ -1829,6 +1829,16 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
+  useEffect(() => {
+    if (!document.getElementById('cavt-google-fonts')) {
+      const link = document.createElement('link');
+      link.id = 'cavt-google-fonts';
+      link.rel = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@200;300;400;700;800&display=swap';
+      document.head.appendChild(link);
+    }
+  }, []);
+
   const handleSelectInterest = useCallback((id) => {
     if (activeId === id) {
       setActiveId(null);
@@ -1876,7 +1886,6 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
   return (
     <div style={{ width: '100%', minHeight: '100dvh', fontFamily: 'Cairo,sans-serif', direction: 'rtl', overflow: 'auto', background: '#fff', display: 'flex', flexDirection: 'column' }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@200;300;400;700;800&display=swap');
         @keyframes hubB { 0%,100%{opacity:0.35} 50%{opacity:0.85} }
         @keyframes leafPulse { 0%,100%{filter:drop-shadow(0 0 3px rgba(171,19,28,0.2))} 50%{filter:drop-shadow(0 0 10px rgba(171,19,28,0.55))} }
         @keyframes flowLine { from{stroke-dashoffset:20} to{stroke-dashoffset:0} }
@@ -1920,22 +1929,22 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
         }}>
           اكتشف اهتماماتك — المسار الثاني
         </span> */}
-        <span style={{
-          direction: 'rtl',
-          fontWeight: 300,
-          fontSize: isMobile ? 10 : 20,
-          letterSpacing: isMobile ? 1 : 2,
-          color: 'rgba(255,255,255,0.95)',
-          fontFamily: 'Tajawal, sans-serif',
-          whiteSpace: 'nowrap',
-          maxWidth: isMobile ? '100%' : 'none',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
-          textAlign: 'center',
-          justifySelf: 'center',
-        }}>
-          اكتشف اهتماماتك — المسار الثاني
-        </span>
+        <h6 style={{
+  margin: 0,
+  direction: 'rtl',
+  fontWeight: 300,
+  fontSize: isMobile ? 11 : 20,
+  letterSpacing: isMobile ? 1 : 2,
+  color: 'rgba(255,255,255,0.95)',
+  fontFamily: 'Tajawal, sans-serif',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  textAlign: 'center',
+  justifySelf: 'center',
+}}>
+  اكتشف اهتماماتك — المسار الثاني
+</h6>
         <img
           src={logo}
           alt="CAVT Logo"
