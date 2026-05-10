@@ -401,12 +401,19 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
           fontFamily: "'Forma DJR Arabic',sans-serif", fontSize: isMobile ? 12 : 13, cursor: 'pointer',
           justifySelf: 'start', whiteSpace: 'nowrap',
         }}>رجوع</button>
-        <span style={{
-          direction: 'rtl', fontSize: isMobile ? 9 : 11, letterSpacing: isMobile ? 0.5 : 1.2,
-          color: 'rgba(255,255,255,0.75)', fontFamily: "'Forma DJR Arabic',sans-serif",
-          whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
-          textAlign: 'center', justifySelf: 'center',
-        }}>اكتشف اهتماماتك — المسار الثاني</span>
+       <h6
+  style={{
+    margin: 0,
+    fontWeight: '200', // remove bold
+    fontSize: isMobile ? 60 : 22,
+    letterSpacing: isMobile ? 1 : 2,
+    color: 'rgba(255,255,255,0.95)',
+    fontFamily: 'Tajawal, sans-serif',
+    textAlign: 'center',
+  }}>
+          اكتشف اهتماماتك — المسار الثاني
+</h6>
+
         <img src={logo} alt="CAVT Logo" style={{
           height: 42, width: 'auto', objectFit: 'contain', display: 'block', justifySelf: 'end',
         }} />

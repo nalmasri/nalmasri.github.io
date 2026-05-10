@@ -41,22 +41,21 @@ export default function Header() {
       </button>
 
       {/* CENTER — subtitle */}
-      <span style={{
-        direction: 'rtl',
-        fontSize: isMobile ? 9 : 11,
-        letterSpacing: isMobile ? 0.8 : 1.5,
-        color: 'rgba(255,255,255,0.75)',
-        fontFamily: 'Tajawal,sans-serif',
-        whiteSpace: 'nowrap',
-        maxWidth: isMobile ? '100%' : 'none',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        textAlign: 'center',
-        justifySelf: 'center',
-      }}>
+    <h6
+  style={{
+    margin: 0,
+    fontWeight: '200', // remove bold
+    fontSize: isMobile ? 60 : 20,
+    letterSpacing: isMobile ? 1 : 2,
+    color: 'rgba(255,255,255,0.95)',
+    fontFamily: 'Tajawal, sans-serif',
+    textAlign: 'center',
+  }}
+>
         اعرف شغفك — المسار الأول
-      </span>
+</h6>
 
+       
       {/* RIGHT — logo */}
       <img
         src={logo}
