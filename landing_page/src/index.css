@@ -1,31 +1,4 @@
 /* App.css */
-@font-face {
-  font-family: 'Forma DJR Arabic';
-  src: url('../../Fonts/Forma DJR Arabic /Forma DJR Arabic Text Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Forma DJR Arabic';
-  src: url('../../Fonts/Forma DJR Arabic /Forma DJR Arabic Text Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Forma DJR Arabic';
-  src: url('../../Fonts/Forma DJR Arabic /Forma DJR Arabic Text Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Forma DJR Arabic';
-  src: url('../../Fonts/Forma DJR Arabic /Forma DJR Arabic Text Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
 * {
   margin: 0;
   padding: 0;
@@ -37,8 +10,7 @@
   --cavt-charcoal: #404040;
   --cavt-light-bg: #f8f8f8;
   --cavt-white: #ffffff;
-  /* --font-primary: "Source Sans 3", sans-serif; */
-  --font-primary: 'Forma DJR Arabic', sans-serif;
+  --font-primary: Tahoma, Arial, sans-serif;
 
 
 }
