@@ -293,7 +293,8 @@
 //     </div>
 //   );
 // }
-import { useState, useCallback, useEffect } from 'react';
+// import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import './index.css';
 import Header from "./Header.jsx";
 import UserExploresApp from "../../user_explores/src/App.jsx";
@@ -363,6 +364,14 @@ export default function App() {
     setShowPathApp(true);
     setShowExploreApp(false);
   };
+const videoRef = useRef(null);
+
+useEffect(() => {
+  const vid = videoRef.current;
+  if (vid) {
+    vid.play().catch(() => {});
+  }
+}, []);
 
   const handleScrollTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -381,9 +390,15 @@ export default function App() {
       <Header />
 
       <section className="hero-video-section">
-        <video className="bg-video" autoPlay muted loop playsInline>
+        {/* <video className="bg-video" autoPlay muted loop playsInline>
           <source src={heroVideo} type="video/mp4" />
-        </video>
+        </video> */}
+
+<video ref={videoRef} className="bg-video" autoPlay muted loop playsInline>
+  <source src={heroVideo} type="video/mp4" />
+</video>
+
+        {/* <video ref={videoRef} className="bg-video" autoPlay muted loop playsInline disablePictureInPicture></video> */}
         <div className="hero-overlay" />
 
         <div className="hero-content">
@@ -564,7 +579,7 @@ export default function App() {
             <div style={{ color: 'rgba(255,255,255,0.82)', fontSize: isMobile ? 12 : 14 }}>
               © All rights reserved 2026 CAVT
             </div>
-            <button
+            {/* <button
               type="button"
               onClick={handleScrollTop}
               aria-label="Scroll to top"
@@ -588,7 +603,34 @@ export default function App() {
               }}
             >
               ^
-            </button>
+            </button> */}
+            <button
+  type="button"
+  onClick={handleScrollTop}
+  aria-label="Scroll to top"
+  style={{
+    width: 56,
+    height: 56,
+    borderRadius: '50%',
+    border: 'none',
+    background: 'linear-gradient(135deg, #9c0d13, #c41a22)',
+    color: '#fff',
+    cursor: 'pointer',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxShadow: '0 6px 20px rgba(156,13,19,0.45)',
+    position: isMobile ? 'static' : 'fixed',
+    right: isMobile ? 'auto' : 24,
+    bottom: isMobile ? 'auto' : 24,
+    zIndex: 70,
+    transition: 'transform 0.2s, box-shadow 0.2s',
+  }}
+>
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
           </div>
         </div>
       </div>

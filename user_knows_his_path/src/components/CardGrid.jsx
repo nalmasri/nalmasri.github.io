@@ -271,7 +271,7 @@ const carIcon =
     program: 'ميكانيكي تركيب وصيانة الآلات والمعدات الصناعية',
     title: 'فني صيانة',
     description: 'يضمن استمرارية الأداء وتقليل التعطل',
-    icon: toolsIcon,
+    icon: wrenchIcon,
     iconClass: 'ic-purple',
   },
   {
@@ -931,9 +931,9 @@ drawConnections(rightCards, 'right');
         ))}
       </div>
 
-      <div className="hint" id="hint">
+      {/* <div className="hint" id="hint">
         <p>اضغط على أي بطاقة لعرض <strong>تفاصيل البرنامج التدريبي</strong> كاملاً</p>
-      </div>
+      </div> */}
     </div>
   );
 }

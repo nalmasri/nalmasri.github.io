@@ -1279,7 +1279,7 @@ h1 span {
 }
 
 .details-section .job-box::before {
-  content: '→';
+  content: none;
 
   display: flex;
   align-items: center;

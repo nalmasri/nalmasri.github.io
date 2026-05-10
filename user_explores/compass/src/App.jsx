@@ -411,7 +411,7 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
     fontFamily: 'Tajawal, sans-serif',
     textAlign: 'center',
   }}>
-          اكتشف اهتماماتك — المسار الثاني
+          اكتشفw اهتماماتك — المسار الثاني
 </h6>
 
         <img src={logo} alt="CAVT Logo" style={{
@@ -530,7 +530,34 @@ export default function CAVTInterestsExplorer({ onBack = () => {} }) {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, paddingTop: 6, flexWrap: 'wrap' }}>
             <div style={{ color: 'rgba(255,255,255,0.82)', fontSize: 14 }}>© All rights reserved 2026 CAVT</div>
-            <button type="button" onClick={handleScrollTop} aria-label="Scroll to top" style={{ width:64,height:64,borderRadius:'50%',border:'none',background:'#000',color:'#fff',cursor:'pointer',display:'inline-flex',alignItems:'center',justifyContent:'center',fontSize:28,boxShadow:'0 6px 16px rgba(0,0,0,0.28)',position:'fixed',right:22,bottom:18,zIndex:70 }}>^</button>
+            {/* <button type="button" onClick={handleScrollTop} aria-label="Scroll to top" style={{ width:64,height:64,borderRadius:'50%',border:'none',background:'#000',color:'#fff',cursor:'pointer',display:'inline-flex',alignItems:'center',justifyContent:'center',fontSize:28,boxShadow:'0 6px 16px rgba(0,0,0,0.28)',position:'fixed',right:22,bottom:18,zIndex:70 }}>^</button> */}
+          <button
+  type="button"
+  onClick={handleScrollTop}
+  aria-label="Scroll to top"
+  style={{
+    width: 56,
+    height: 56,
+    borderRadius: '50%',
+    border: 'none',
+    background: 'linear-gradient(135deg, #9c0d13, #c41a22)',
+    color: '#fff',
+    cursor: 'pointer',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxShadow: '0 6px 20px rgba(156,13,19,0.45)',
+    position: isMobile ? 'static' : 'fixed',
+    right: isMobile ? 'auto' : 24,
+    bottom: isMobile ? 'auto' : 24,
+    zIndex: 70,
+    transition: 'transform 0.2s, box-shadow 0.2s',
+  }}
+>
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
           </div>
         </div>
       </div>
