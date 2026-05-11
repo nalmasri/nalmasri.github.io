@@ -119,7 +119,7 @@ export default function CareerCompass() {
               </div>
 
               <div>
-                <h3>{card.title}</h3>
+                <p>{card.title}</p>
                 <p>{card.desc}</p>
               </div>
             </div>
