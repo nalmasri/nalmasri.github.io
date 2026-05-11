@@ -298,14 +298,7 @@ const carIcon =
     icon: monitorIcon,
     iconClass: 'ic-yellow',
   },
-  {
-    col: 2,
-    program: 'التصميم والتصنيع الرقمي',
-    title: 'فني تصنيع رقمي',
-    description: 'يحول التصاميم الرقمية إلى منتجات حقيقية',
-    icon: rulerIcon,
-    iconClass: 'ic-green',
-  },
+
   {
     col: 2,
     program: 'أنظمة الطاقة المتجددة',
@@ -332,14 +325,7 @@ const carIcon =
     icon: shieldIcon,
     iconClass: 'ic-blue',
   },
-  {
-    col: 4,
-    program: 'الأنظمة الكهربائية المتكاملة في المباني الذكية',
-    title: 'فني مباني ذكية',
-    description: 'يركب الأنظمة الكهربائية في المباني الحديثة',
-    icon: homeIcon,
-    iconClass: 'ic-red',
-  },
+
   {
     col: 4,
     program: 'فني أنظمة التكييف والتبريد وأتمتتها',

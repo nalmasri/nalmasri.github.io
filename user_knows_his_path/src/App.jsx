@@ -206,12 +206,8 @@ function App() {
               <div className="details-header">
 
                 <h2>
-                  {selectedData.title}
+                  {selectedData.program}
                 </h2>
-
-                <p className="details-tagline">
-                  {selectedData.description}
-                </p>
 
               </div>
 
