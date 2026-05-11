@@ -107,7 +107,7 @@ export default function Header({ onBack }) {
           color: 'white',
           padding: isMobile ? '5px 12px' : '6px 18px',
           borderRadius: 6,
-          fontFamily: 'Tajawal,sans-serif',
+          fontFamily: 'Tahoma, Arial, sans-serif',
           fontSize: isMobile ? 12 : 14,
           cursor: 'pointer',
           justifySelf: 'start',
@@ -124,7 +124,7 @@ export default function Header({ onBack }) {
         fontSize: isMobile ? 11 : 20,
         letterSpacing: isMobile ? 1 : 2,
         color: 'rgba(255,255,255,0.95)',
-        fontFamily: 'Tajawal, sans-serif',
+        fontFamily: 'Tahoma, Arial, sans-serif',
         textAlign: 'center',
         direction: 'rtl',
       }}>

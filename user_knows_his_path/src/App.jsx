@@ -235,24 +235,24 @@ function App() {
 
               </div>
 
-              {/* JOBS */}
+              {/* PLACES */}
 
               <div className="details-section">
 
                 <h3>
-                  الوظائف المستقبلية
+                  اماكن العمل المستقبلية
                 </h3>
 
                 <div className="jobs-grid">
 
-                  {selectedData.jobs?.map(
-                    (job, index) => (
+                  {selectedData.places?.map(
+                    (place, index) => (
 
                       <div
                         className="job-box"
                         key={index}
                       >
-                        {job}
+                        {place}
                       </div>
 
                     )
