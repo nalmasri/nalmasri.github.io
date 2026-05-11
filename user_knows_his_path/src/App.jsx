@@ -326,7 +326,7 @@ function App() {
           flexDirection: 'column',
           justifyContent: 'space-between',
           gap: isMobile ? 14 : 18,
-          fontFamily: 'Tajawal,sans-serif',
+          fontFamily: 'Tahoma, Arial, sans-serif',
         }}>
           <div style={{
             display: 'grid',
